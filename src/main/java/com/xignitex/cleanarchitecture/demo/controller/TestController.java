@@ -1,4 +1,4 @@
-package com.xignitex.cleanarchitecture.demo;
+package com.xignitex.cleanarchitecture.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
