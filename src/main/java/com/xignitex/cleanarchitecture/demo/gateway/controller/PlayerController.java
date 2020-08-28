@@ -18,13 +18,8 @@ public class PlayerController {
     private final UseCase<String, Player> getPlayerInformation;
 
     @GetMapping(value="/{id}")
-    public Player getPlayerInformation(@PathVariable("id") final String id){
-        return getPlayerInformation(id);
+    public Player getPlayerInfo(@PathVariable("id") final String id){
+        return getPlayerInformation.execute(id);
     }
-
     
-    @GetMapping("/test")
-    public Player getTest(){
-        return getPlayerInformation("123");
-    }
 }
