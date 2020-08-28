@@ -16,9 +16,13 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<springfox-swagger.version>2.9.2</springfox-swagger.version>
+		<pmd.version>6.20.0</pmd.version>
+		<logstash-logback-encoder.version>6.3</logstash-logback-encoder.version>
 		<sonar.projectKey>XigniteX666_cleanarchitecture</sonar.projectKey>
 		<sonar.organization>xignitex666</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.java.pmd.reportPaths>target/pmd.xml</sonar.java.pmd.reportPaths>
 	</properties>
 
 	<dependencies>
@@ -51,6 +55,27 @@
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger.version}</version>
+		</dependency>
+
+		<!-- For logging support -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>${logstash-logback-encoder.version}</version>
 		</dependency>
 	</dependencies>
 
