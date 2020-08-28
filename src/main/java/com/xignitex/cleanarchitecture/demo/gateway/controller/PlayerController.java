@@ -1,4 +1,4 @@
-package com.xignitex.cleanarchitecture.demo.controller;
+package com.xignitex.cleanarchitecture.demo.gateway.controller;
 
 import com.xignitex.cleanarchitecture.demo.model.Player;
 import com.xignitex.cleanarchitecture.demo.usecase.UseCase;
@@ -21,5 +21,5 @@ public class PlayerController {
     public Player getPlayerInfo(@PathVariable("id") final String id){
         return getPlayerInformation.execute(id);
     }
-    
+
 }
