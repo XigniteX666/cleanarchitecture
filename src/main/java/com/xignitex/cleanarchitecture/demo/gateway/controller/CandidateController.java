@@ -13,20 +13,14 @@ import java.util.List;
 @RequestMapping("/candidate")
 public class CandidateController {
 
-
     @Autowired
     private CandidateRepository candidateRepository;
 
-
-    @GetMapping("/test")
-    public String test(){
-        return "OK";
-    }
-
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Candidate add(@RequestBody Candidate candidate){
-        return candidateRepository.save(candidate);
+    public List<Candidate> add(@RequestBody Candidate candidate){
+        candidateRepository.save(candidate);
+        return  candidateRepository.findAll();
     }
 
     @PutMapping(value = "/{id}")
